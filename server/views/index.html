@@ -1,0 +1,87 @@
+<head>
+    <meta charset="UTF-8">
+    <title>{{block 'title'}}后台管理系统{{/block}}</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                <a class="navbar-brand" href="#">知识典后台管理系统</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/index">管理员</a></li>
+                    <li><a href="/login">登录</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="padding-top: 60px;">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#">分享列表 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">用户列表</a></li>
+                    <li><a href="#">评论列表</a></li>
+                    <li><a href="#">发布消息</a></li>
+                </ul>
+            </div>
+
+            <h2 class="sub-header">Section title</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>shareId</th>
+                            <th>headline</th>
+                            <th>summary</th>
+                            <th>userid</th>
+                            <th>查看</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ each shares }}
+                        <tr>
+                            <td>{{ $index }}</td>
+                            <td>{{ $value.shareId }}</td>
+                            <td>{{ $value.headline }}</td>
+                            <td>{{ $value.summary }}</td>
+                            <td>{{ $value.userid }}</td>
+                            <!-- <td><a href="/share/inform?shareId={{ $value.shareId }}"><button type="button" class="btn btn-default" onclick="haha()">查看</button></a></td> -->
+                            <td><button type="button" class="btn btn-default" onclick="haha(`$value.shareId`)">查看</button></td>
+                            <script>
+                                function haha(id) {
+                                    alert(value.shareId)
+                                }
+                            </script>
+                        </tr>
+                        {{ /each }}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="/node_modules/jquery/dist/jquery.js"><\/script>')
+    </script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>

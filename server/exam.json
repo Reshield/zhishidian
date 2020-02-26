@@ -1,0 +1,28 @@
+{
+    "status": "0",
+    "msg": "",
+    "results": [
+        {
+            "class": "多选题",
+            "question": "世界上最懒的人是谁？",
+            "options": [
+                {
+                    "ifRight": "right",
+                    "answer": "林慧琴"
+                },
+                {
+                    "ifRight": "wrong",
+                    "answer": "阿鸡"
+                },
+                {
+                    "ifRight": "wrongt",
+                    "answer": "haha"
+                },
+                {
+                    "ifRight": "wrong",
+                    "answer": "有病啊"
+                }
+            ]
+        }
+    ]
+}

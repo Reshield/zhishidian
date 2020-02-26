@@ -1,0 +1,28 @@
+{
+    "submitDanxuan": {
+        "options": [
+            {
+                "message": "cds",
+                "ifRight": 2
+            },
+            {
+                "message": "vafdv",
+                "ifRight": 1
+            },
+            {
+                "message": "vfdagfdv",
+                "ifRight": 2
+            },
+            {
+                "message": "hyhyh",
+                "ifRight": 2
+            }
+        ],
+        "question": "dsa",
+        "questionClass": {
+            "class": "中学",
+            "subject": "数学",
+            "questionType": "单选题"
+        }
+    }
+}
